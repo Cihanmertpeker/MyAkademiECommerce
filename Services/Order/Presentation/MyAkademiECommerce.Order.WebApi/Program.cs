@@ -1,4 +1,5 @@
 using MyAkademiECommerce.Order.Application.Features.CQRS.Handlers;
+using MyAkademiECommerce.Order.Application.Interfaces;
 using MyAkademiECommerce.Order.Persistance.Context;
 using System.Reflection;
 
@@ -11,6 +12,7 @@ builder.Services.AddMediatR(cfg =>
 
 builder.Services.AddScoped<GetAddressQueryHandler>();
 builder.Services.AddDbContext<OrderContext>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(IRepository<>));
 // Add services to the container.
 
 builder.Services.AddControllers();
