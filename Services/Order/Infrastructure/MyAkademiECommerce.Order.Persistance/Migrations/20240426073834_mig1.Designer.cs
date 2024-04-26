@@ -12,7 +12,7 @@ using MyAkademiECommerce.Order.Persistance.Context;
 namespace MyAkademiECommerce.Order.Persistance.Migrations
 {
     [DbContext(typeof(OrderContext))]
-    [Migration("20240425085310_mig1")]
+    [Migration("20240426073834_mig1")]
     partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
